@@ -1,3 +1,25 @@
 body{
-    background-color: green;
+    background-image: url(https://i.pinimg.com/236x/ab/62/20/ab622020a7ac7dc919f81eadc29b3304.jpg);
+    
 }
+
+#img{
+    align-items: center;
+    padding: 32%;
+    height: 40%;
+}
+
+@keyframes piscar {
+    0% { opacity: 1; color: red; }
+    50% { opacity: 0; color: blue; }
+    100% { opacity: 1; color: green; }
+  }
+  
+  .texto-piscando {
+    animation: piscar 1.5s infinite;
+    font-size: 200px;
+    padding: 5%;
+   
+    
+  }
+  
