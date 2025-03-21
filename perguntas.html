@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+        background-color: rgb(235, 59, 162);
+        }
+        .quiz-container {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        border: 8px solid #000000;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px rgba(188, 180, 180, 0.1);
+        }
+        .question {
+        font-size: 18px;
+        margin-bottom: 10px;
+        }
+        .options label {
+        display: block;
+        margin: 5px 0;
+        }
+        button {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        #result {
+        margin-top: 15px;
+        font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Quiz HTML</h2>
+
+        <form id="quiz-form">
+
+        <div class="question">1) O que Billy bruto diz para translúcido em The Boys?</div>
+        <div class="options"></div>
+
+        <label><input type="radio" name="q1" value="Você não é invisível, é semitransparente!">a)Você não é invisível, é semitransparente!”</label>
+        <label><input type="radio" name="q1" value="’’Você é meu ídolo”">b)’’Você é meu ídolo”</label>
+        <label><input type="radio" name="q1" value="”…”">c)”…”</label>
+
+        <div>
+        <div class="question">2) Qual a fórmula de Einstein?</div>
+        <div class="options">
+
+        <label><input type="radio" name="q2" value="mH = 2">a)mH = 2</label>
+        <label><input type="radio" name="q2" value="E = mc2">b)E = mc2</label>
+        <label><input type="radio" name="q2" value="HB20">c)HB20</label>
+
+        </div>
+        <div class="question">3) Quanto é 7 x 70 elevado a 7?</div>
+        <div class="options">
+
+        <label><input type="radio" name="q3" value="5.967.702.000.000">a)5.967.702.000.000</label>
+        <label><input type="radio" name="q3" value="5.888.900.000.000">b)5.888.900.000.000</label>
+        <label><input type="radio" name="q3" value="5.764.801.000.000">c)5.764.801.000.000</label>
+
+
+        </div>
+        <div class="question">4) Qual o protagonista de invencível? </div>
+        <div class="options">
+
+        <label><input type="radio" name="q4" value="Mark grayson">a)Mark grayson</label>
+        <label><input type="radio" name="q4" value="Lebron james">b)Lebron james</label>
+        <label><input type="radio" name="q4" value="Arthur Moraes">c)Arthur Moraes</label>
+
+        </div>
+        <div class="question">5)  Sua próxima resposta será não? </div>
+        <div class="options">
+
+        <label><input type="radio" name="q5" value="Não">a)Não</label>
+        <label><input type="radio" name="q5" value="Sim">b)Sim</label>
+        <label><input type="radio" name="q5" value="Talvez">c)Talvez</label>
+
+        </div>
+
+        <button type="button"
+
+        onclick="verificarRespostas()">Enviar</button>
+        </form>
+
+        <p id="result"></p>
+
+    </div>
+
+            <script>
+                function verificarRespostas() {
+                let respostasCorretas = {
+                q1: "Você não é invisível, é semitransparente!",
+                q2: "E = mc2",
+                q3: "5.764.801.000.000",
+                q4: "Mark grayson",
+                q5: "Sim",
+                }
+                let pontuacao = 0;
+                // Verifica respostas
+                let form = document.getElementById("quiz-form");
+                let resposta1 = form.q1.value;
+                let resposta2 = form.q2.value;
+                let resposta3 = form.q3.value;
+                let resposta4 = form.q4.value;
+                let resposta5 = form.q5.value;
+                if (resposta1 === respostasCorretas.q1) pontuacao++;
+                if (resposta2 === respostasCorretas.q2) pontuacao++;
+                if (resposta3 === respostasCorretas.q3) pontuacao++;
+                if (resposta4 === respostasCorretas.q4) pontuacao++;
+                if (resposta5 === respostasCorretas.q5) pontuacao++;
+                // Mostra resultado
+                
+                document.getElementById("result").innerText = `Você acertou
+                
+                ${pontuacao} de 5 perguntas!`;
+                }
+                </script>
+
+</body>
+</html>
