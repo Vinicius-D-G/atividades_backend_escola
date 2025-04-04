@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+
+    <title>Imagem com efeitos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: rgb(3, 0, 0);
+        }
+
+        h1 {
+            color: #72004e;
+            font-size: 36px;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            transition: 0.5s;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 200px;
+        
+            height: 200px;
+        
+            object-fit: cover;
+  
+
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .container:hover>.card:not(:hover) {
+            opacity: 0.5;
+
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        p{
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Efeitos em Imagens</h1>
+    <p style="text-align: center;">Clique nas imagens para ver os
+        efeitos!</p>
+    <div class="container">
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/pt/7/7c/Dark_Souls_1_capa.png" alt="Imagem 1"></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/pt/2/22/Dark_Souls_2_capa.png" alt="Imagem 2"></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/pt/e/e9/Dark_Souls_3_capa.png" alt="Imagem 3"></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/pt/2/29/Bloodborne_capa.png" alt="Imagem 4"></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/pt/7/7b/Sekiro_Shadows_Die_Twice_capa.png" alt="Imagem 5"></div>
+    </div>
+</body>
+
+</html>
